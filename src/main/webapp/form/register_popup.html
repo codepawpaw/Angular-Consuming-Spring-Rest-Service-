@@ -1,0 +1,32 @@
+<section id="content">
+    <div class="container">
+		                <div id="post">
+				   				<div class="container-account-registration">  
+		                 			<div class="post-form clearfix">
+		                 				<div class="title-account-registration"><B>Name</B></div>
+		                 				<input name="name" placeholder="Input your name" class="input-data" ng-model="account.name"></input>
+                        		
+                        				<div class="title-account-registration"><B>Phone Number</B></div>
+		                 				<input name="name" placeholder="Input your phone number" class="input-data" ng-model="account.phone"></input>
+                        		
+                        				<div class="title-account-registration"><B>Address</B></div>
+		                 				<input name="name" placeholder="Input your address" class="input-data" ng-model="account.address"></input>
+		                 				
+		                 				<div class="title-account-registration"><B>City</B></div>
+		                 				<input name="name" placeholder="Input your city" class="input-data" ng-model="account.city"></input>
+		                 				
+		                 				<div class="title-account-registration"><B>Role</B></div>
+		                 				<select ng-model="account.role">
+												<option ng-repeat="x in role" value="{{x.id}}">{{x.name}}</option>
+										</select>
+                        				
+                        				<BR><BR><BR>
+                        				<button class="btnSave btn-orange" id="msg-submit" ng-click="save(account)" ng-if="savePressed==false"><div class="text">Save</div></button>
+                        				<button class="btnSave btn-orange buttonclicked" id="msg-submit" disabled ng-if="savePressed==true"><div class="text">Wait</div></button>
+                        				<BR><BR>
+                        		</div>
+				  				</div>
+		</div>	
+    </div>
+</section>
+		

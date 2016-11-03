@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="http://code.highcharts.com/stock/highstock.src.js"></script>
+    <script src="../../src/highcharts-ng.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+<h2>Highcharts-ng example</h2>
+
+<div ng-app="myapp">
+    <div ng-controller="myctrl">
+        <div class="row">
+            <div class="span9">
+                <div class="row">
+                    <highchart id="chart1" config="chartConfig" class="span9" ></highchart>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

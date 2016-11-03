@@ -1,0 +1,76 @@
+
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                <BR><BR><BR>
+					<div class="post-container">
+                    	<div class="col-md-8 col-sm-9 wow fadeInLeft">
+                        	<div class="post-form clearfix">
+                                	<div class="input-field message">
+                                    	<input name="message" class="form-control" placeholder="Say something" required="" ng-model="product.description"/>
+                                	</div>
+                                	<button class="btn btn-blue" id="msg-submit" ng-click="save(product, user.id)"><div class="text">Share</div></button>
+                        	</div>
+                    	</div>
+                    </div>
+                </div>
+                <div ng-if="isPosted">
+                <div ng-repeat="product in listOfNewProduct | orderBy:'-index'">
+                  <div class="row">
+		                <div id="post">
+				   			<div class="photo">
+		                		<figure class="mix portfolio-item app">
+		                    		<img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2015/12/03/13/29/artists-1074959_960_720.jpg" alt="Portfolio Item">
+		                    		<a href="img/portfolio/portfolio-1.jpg" title="Title One" rel="portfolio" class="fancybox"><span class="plus"></span></a>
+		                		</figure>
+				  			 </div>
+				   
+				   			<div class="content">
+				   				<div class="inside">  
+				   				
+				   				<div class="title" ng-click="gotoProfile(product.userId)">
+				   					<B>{{product.userName}}</B>
+				   				</div>
+				   				<!-- <div class="sub-title">Technical Assistant to CEO Tiket.com (PT. Global Tiket Network)</div> -->
+				   				<BR>
+				  				<p>{{product.description}}</p>
+				  				
+				  				</div>
+				  			</div>
+				  			
+						</div>
+					</div>
+				</div>
+                </div>
+                <div ng-repeat="product in products">
+	                <div class="row">
+		                <div id="post">
+				   			<div class="photo">
+		                		<figure class="mix portfolio-item app">
+		                    		<img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2015/12/03/13/29/artists-1074959_960_720.jpg" alt="Portfolio Item">
+		                    		<a href="img/portfolio/portfolio-1.jpg" title="Title One" rel="portfolio" class="fancybox"><span class="plus"></span></a>
+		                		</figure>
+				  			 </div>
+				   
+				   			<div class="content">
+				   				<div class="inside">  
+				   				<div class="title" ng-click="gotoProfile(product.userId)">
+				   					<B>{{product.userName}}</B>
+				   				</div>
+				   				<!--<div class="sub-title">Technical Assistant to CEO Tiket.com (PT. Global Tiket Network)</div>-->
+				   				<BR>
+				  				<p>{{product.description}}</p>
+				  				</div>
+				  			</div>
+				  			
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+            </div>
+        </section>
+		

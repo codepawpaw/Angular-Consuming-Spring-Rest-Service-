@@ -1,0 +1,115 @@
+<div class="logmod">
+  <div class="logmod__wrapper">
+    <div class="logmod__container">
+      <ul id="ul" class="ul logmod__tabs">
+            	<li class="cur" ng-repeat="tab in tabs"
+              	ng-class="{active:isActiveTab(tab.url)}" 
+                ng-click="onClickTab(tab)">{{tab.title}}</li>
+      </ul>
+     <div id="mainView">
+            <div ng-include="currentTab"></div>
+     </div>
+
+      <div class="logmod__tab-wrapper">
+
+      <script type="text/ng-template" id="signup">
+        <div class="logmod__heading">
+          <span class="logmod__heading-subtitle">Enter your personal details <strong>to create an acount</strong></span>
+          
+	    </div>
+        <div class="logmod__form">
+          <form accept-charset="utf-8" class="simform">
+            <div class="sminputs">
+              <div class="input full">
+                <div class="title"><B>Email*</B></div>
+                <input class="string optional" maxlength="255" id="user-email" ng-model="auth.username" placeholder="Email" type="email" size="50" required/>
+              </div>
+            </div>
+			<BR>
+            <div class="sminputs">
+              <div class="input string optional">
+                <div class="title"><B>Password *</B></div>
+                <input class="string optional" maxlength="255" id="user-pw" ng-model="auth.password" placeholder="Password" type="password" size="50" />
+              </div>
+              <div class="input string optional">
+                <div class="title"><B>Repeat password *</B></div>
+                <input class="string optional" maxlength="255" id="user-pw-repeat" ng-model="auth.name" placeholder="Repeat password" type="password" size="50" />
+              </div>
+            </div>
+	        <BR>
+            <div class="simform__actions">
+              <center>
+              <button class="sumbit" name="commit" ng-click="openRegisterModal(auth)">
+			  Create Account
+			  </button>
+			  <button class="sumbit buttonclicked" name="commit" ng-if="buttonPressed==true">
+			  Please Wait...
+			  </button>
+              <span class="simform__actions-sidetext">By creating an account you agree to our <a class="special" href="#" target="_blank" role="link">Terms & Privacy</a></span>
+              
+ 			  </center>
+		    </div> 
+          </form>
+        </div>
+		<div class="logmod__alter">
+          <div class="logmod__alter-container">
+            <button class="facebook2" name="commit" value="Facebook">
+				Facebook
+			</button>
+            <button class="google2" name="commit" value="Google">
+				Google+
+			</button>
+          </div>
+        </div>
+        </script>
+
+
+        <script type="text/ng-template" id="login">
+        <div class="logmod__heading">
+          <div class="title"><span class="logmod__heading-subtitle">Enter your email and password <strong>to sign in</strong></span></div>
+        </div> 
+        <div class="logmod__form">
+          <form accept-charset="utf-8" class="simform">
+            <div class="sminputs">
+              <div class="input full">
+                <div class="title"><B>Email*</B></div>
+                <input class="string optional" ng-model="auth.username" maxlength="255" id="user-email" placeholder="Email" type="email" size="50" required/>
+              </div>
+            </div>
+			<BR>
+            <div class="sminputs">
+              <div class="input full">
+                <div class="title"><B>Password *</B></div>
+                <input class="string optional" ng-model="auth.password" maxlength="255" id="user-pw" placeholder="Password" type="password" size="50" />
+                						<!--<span class="hide-password">Show</span>-->
+              </div>
+            </div>
+            <BR>
+            <div class="simform__actions">
+              <button ng-click="login(auth)" class="sumbit" name="commit" ng-if="loginPressed==false">
+			  Log In
+              </button>
+			  <button class="sumbit buttonclicked" name="commit" ng-if="loginPressed==true">
+			  Please Wait...
+              </button>
+              <span class="simform__actions-sidetext"><a class="special" role="link" href="#">Forgot your password?<br>Click here</a></span>
+            </div> 
+          </form>
+        </div>
+		<div class="logmod__alter">
+          <div class="logmod__alter-container">
+            <button class="facebook2" name="commit" value="Facebook">
+				Facebook
+			</button>
+            <button class="google2" name="commit" value="Google">
+				Google+
+			</button>
+          </div>
+        </div>
+        </script>
+
+
+      </div>
+    </div>
+  </div>
+</div>

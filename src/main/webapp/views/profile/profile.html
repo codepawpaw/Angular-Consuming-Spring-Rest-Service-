@@ -1,0 +1,66 @@
+<section id="content">
+            <div class="container">
+                <div class="row">
+					<BR><BR><BR><BR><BR><BR>
+					<div class="post-container2">
+						 <BR>
+						 <button class="btn btn-blue" id="msg-submit" ng-click="donate()" ng-if="profileId!=username"><div class="text">Donate</div></button>
+                         <div class="profile-name" id="name">{{user.name}}</div>
+                         <div style="padding: 15px">
+                         	<img src='https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif'/>
+                         </div>                         
+                         <div class="row attr-section">
+                         	<div class="attr-title">Email : <br/></div>
+                         	<div class="attr-content">{{user.email}}</div>
+                         </div>
+                         <div class="row attr-section">
+                         	<div class="attr-title">Phone no : <br/></div>
+                         	<div class="attr-content">{{user.phoneNumber}}</div>
+                         </div>
+                         <div class="row attr-section">
+                         	<div class="attr-title">Address : <br/></div>
+                         	<div class="attr-content">{{user.address}}</div>
+                         </div>
+                         <div class="row attr-section">
+                         	<div class="attr-title">City : <br/></div>
+                         	<div class="attr-content">{{user.city}}</div>
+                         </div>
+                         <div class="row attr-section">
+                         	<div class="attr-title">Followers : <br/></div>
+                         	<div class="attr-content">{{user.followerCount}}</div>
+                         </div>
+                         <div class="row attr-section" ng-if="profileId==username">
+                         	<div class="attr-content">Your total funding is : {{totalFunding}}</div>
+                         </div>
+                    </div>
+                </div>
+                
+                <div ng-repeat="product in products">
+	                <div class="row">
+		                <div id="post">
+				   			<div class="photo">
+		                		<figure class="mix portfolio-item app">
+		                    		<img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2015/12/03/13/29/artists-1074959_960_720.jpg" alt="Portfolio Item">
+		                    		<a href="img/portfolio/portfolio-1.jpg" title="Title One" rel="portfolio" class="fancybox"><span class="plus"></span></a>
+		                		</figure>
+				  			 </div>
+				   
+				   			<div class="content">
+				   				<div class="inside">  
+				   				
+				   				<div class="title">
+				   					<B>{{user.name}}</B>
+				   				</div>
+				   				<!-- <div class="sub-title">Technical Assistant to CEO Tiket.com (PT. Global Tiket Network)</div>-->
+				   				<BR>
+				   				
+				  				<p>{{product.description}}</p>
+				  				</div>
+				  			</div>
+				  			
+						</div>
+					</div>
+				</div>
+            </div>
+</section>
+		
